@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Igit</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c1c0912b51.js"></script>
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="navigation">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logo.png" alt="">
+                    </a>
+                    <ul class="nav-first">
+                        <li><a id="li1" href="about.html">Մեր մասին</a></li>
+                        <li><a id="li2" href="acheivements.html">Մրցանակներ</a></li>
+                        <li><a id="li3"  href="product.html">Ապրանքներ</a></li>
+                        <li class="underline"><a class="href" id="li4" href="video.html">Տեսանյութեր</a></li>
+                        <li><a id="li5" href="contact.html">Կապ</a></li>
+                        <li class="close" onclick="menuToggle()"><i class="fas fa-times"></i></li>
+                    </ul>
+                    <div class="lang">
+                        <a href="#arm" data-reload onclick="reloadPage()">
+                            <img src="/img/armenia.png" class="arm">
+                        </a>
+                        <a href="#rus" data-reload onclick="reloadPage()">
+                            <img src="/img/russia.png" class="rus">
+                        </a>
+                        <a href="#eng" data-reload onclick="reloadPage()">
+                            <img src="/img/united-states.png" class="us">
+                        </a>
+                    </div>
+                    <div class="burger" id="top-burger" onclick="menuToggle()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+<!-- Video -->
+    <main class="main3">
+        <div class="wrapper-video">
+            <div class="slider">
+                <div class="slider-item item1">
+                   <video poster="/img/Capture5.PNG" src="/video/y2mate.com - Igit Kat_1080p.mp4"></video>
+                </div>
+                <div class="slider-item item2">
+                    <video poster="/img/Capture3.PNG" src="/video/y2mate.com - «Իգիթ» պանիր  Տարվա հանրային ծառայող և տարվա ապրանքանիշ 2016_1080p.mp4"></video>
+                </div>
+                <div class="slider-item item3">
+                    <video poster="/img/Capture.PNG" src="/video/Igit Leninakan.mp4"></video>
+                </div>
+                <div class="slider-item item4">
+                    <video src="/video/y2mate.com - Igit Cappuchino_1080p.mp4"></video>
+                </div>
+                <div class="slider-item item5">
+                     <video poster="/img/Capture1.png" src="/video/y2mate.com - Igit ice cram_1080p.mp4"></video>
+                </div>            
+            </div>
+           <div class="content"></div> 
+        </div>
+    </main>
+    <!-- <main class="main3">
+        <div class="videoContainer">
+            <div class="slider">
+                <video controls width="320" height="215" poster="img/Capture.PNG" height="215" src="./video/Igit Leninakan.mp4"></video>
+                <video class="firstVideo" controls width="420" height="315" src="./video/y2mate.com - Igit Cappuchino_1080p.mp4"></video>
+                <video class="secondVideo" controls width="320" height="215" poster="img/Capture1.PNG" src="./video/y2mate.com - Igit ice cram_1080p.mp4"></video>
+                <video class="thirdVideo" controls width="320" height="215" poster="img/Capture2.PNG"  src="./video/y2mate.com - Igit Kat_1080p.mp4"></video>
+                <video controls width="320" height="215" poster="img/Capture3.PNG" src="./video/y2mate.com - «Իգիթ» պանիր  Տարվա հանրային ծառայող և տարվա ապրանքանիշ 2016_1080p.mp4"></video>
+            </div>
+        </div>
+            <div class="videoButtons">
+            <button class="prev" onclick="prev()"></button>
+            <button class="next" onclick="next()"></button>
+            </div>
+    </main>   -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script>
+
+function menuToggle(){
+
+if(document.querySelector(".nav-first").classList.contains("toggle")){
+    document.querySelector(".nav-first").classList.remove("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "auto";
+    },100)
+    //close
+}
+else{
+    document.querySelector(".nav-first").classList.add("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "hidden";
+    },100)
+    //burger
+    }
+}
+        $(document).ready(function(){
+            $(".slider").slick({
+                arrows:true,
+                dotts:false,
+                adaptiveHeight:true,
+                slidesToShow:3,
+                waitForAnimate:true,
+                centerMode:true,
+                autoplay:true,
+                autoplaySpeed:2000,
+                pauseOnFocus:true,
+                pauseOnHover:true,
+                appendArrows:$(".content"),
+                // responsive:[
+                //     {
+                //         breakpoint:1300,
+                //         settings:{
+                //             slidesToShow:2,
+                //             slidesToScroll:1,
+                //         }
+                //     },
+                //     {
+                //         breakpoint:900,
+                //         settings:{
+                //             slidesToShow:1,
+                //             slidesToScroll:1,
+                //         }
+                //     } 
+                // ]
+            });
+        });
+
+
+
+        var item1 = document.querySelector(".item1");
+        var item1Video = document.querySelector(".item1 > video");
+        var item2 = document.querySelector(".item2");
+        var item2Video = document.querySelector(".item2 > video");
+        var item3 = document.querySelector(".item3");
+        var item3Video = document.querySelector(".item3 > video");
+        var item4 = document.querySelector(".item4");
+        var item4Video = document.querySelector(".item4 > video");
+        var item5 = document.querySelector(".item5");
+        var item5Video = document.querySelector(".item5 > video");
+
+        setInterval(function(){
+
+        },100)
+
+        setInterval(function(){
+            if(item1.classList.contains("slick-center")){
+                item2Video.controls = false
+                item5Video.controls = false
+                item2Video.pause()
+                item5Video.pause()
+                item1Video.controls = true
+            }
+            else if(item2.classList.contains("slick-center")){
+                item1Video.controls = false
+                item3Video.controls = false
+                item1Video.pause()
+                item3Video.pause()
+                item2Video.controls = true
+            }
+            else if(item3.classList.contains("slick-center")){
+                item2Video.controls = false
+                item4Video.controls = false
+                item2Video.pause()
+                item4Video.pause()
+                item3Video.controls = true
+            }
+            else if(item4.classList.contains("slick-center")){
+                item3Video.controls = false
+                item5Video.controls = false
+                item3Video.pause()
+                item5Video.pause()
+                item4Video.controls = true
+            }
+            else if(item5.classList.contains("slick-center")){
+                item4Video.controls = false
+                item1Video.controls = false
+                item4Video.pause()
+                item1Video.pause()
+                item5Video.controls = true
+            }
+    }, 1);
+
+
+        function menuToggle(){
+            if(document.querySelector(".nav-first").classList.contains("toggle")){
+                document.querySelector(".nav-first").classList.remove("toggle");
+                setTimeout(function(){
+                    document.querySelector("body").style.overflow = "auto";
+                },100)
+                //close
+            }
+            else{
+                document.querySelector(".nav-first").classList.add("toggle");
+                setTimeout(function(){
+                    document.querySelector("body").style.overflow = "hidden";
+                },100)
+                //burger
+                }
+            }
+
+            var dataReload = document.querySelectorAll("[data-reload]");
+
+var language = {            
+    eng:{
+        igit:"Igit",
+        secondHeading:"Made with love",
+        li1:"About us",
+        li2:"Acheivements",
+        li3:"Products",
+        li4:"Videos",
+        li5:"Contact",
+    },
+    rus:{
+        igit:"Игит",
+        secondHeading:"Сделано с любовью",
+        li1:"О нас",
+        li2:"Достижения",
+        li3:"Продукты",
+        li4:"Видео",
+        li5:"Связь",
+    }
+};
+
+if(window.location.hash){
+    if(window.location.hash === "#eng"){
+        li1.textContent = language.eng.li1;
+        li2.textContent = language.eng.li2;
+        li3.textContent = language.eng.li3;
+        li4.textContent = language.eng.li4;
+        li5.textContent = language.eng.li5;
+    }
+    else if(window.location.hash === "#rus"){
+        li1.textContent = language.rus.li1;
+        li2.textContent = language.rus.li2;
+        li3.textContent = language.rus.li3;
+        li4.textContent = language.rus.li4;
+        li5.textContent = language.rus.li5;
+    }
+};
+
+
+function reloadPage() {
+    setTimeout(function () {
+        location.reload();
+    }, 100);
+}
+
+
+
+
+</script>
+</body>
+</html>

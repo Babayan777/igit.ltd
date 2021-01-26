@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Igit</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c1c0912b51.js"></script>
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="navigation">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logo.png" alt="">
+                    </a>
+                    <ul class="nav-first">
+                        <li><a id="li1" href="about.html">Մեր մասին</a></li>
+                        <li><a id="li2" href="acheivements.html">Մրցանակներ</a></li>
+                        <li><a id="li3" href="product.html">Ապրանքներ</a></li>
+                        <li><a id="li4" href="video.html">Տեսանյութեր</a></li>
+                        <li class="underline"><a id="li5" class="href" href="contact.html">Կապ</a></li>
+                        <li class="close" onclick="menuToggle()"><i class="fas fa-times"></i></li>
+                    </ul>
+                    <div class="lang">
+                        <a href="#arm" data-reload onclick="reloadPage()">
+                            <img src="/img/armenia.png" class="arm">
+                        </a>
+                        <a href="#rus" data-reload onclick="reloadPage()">
+                            <img src="/img/russia.png" class="rus">
+                        </a>
+                        <a href="#eng" data-reload onclick="reloadPage()">
+                            <img src="/img/united-states.png" class="us">
+                        </a>
+                    </div>
+                    <div class="burger" id="top-burger" onclick="menuToggle()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        </div>
+    </header>
+        <!-- <div class="wrapper">
+            <div class="navigation">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logo.png" alt="">
+                    </a>
+                    <ul class="nav-first">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="acheivements.html">Acheivements</a></li>
+                        <li><a class="href" href="product.html">Products</a></li>
+                        <li><a href="video.html">Video</a></li>
+                        <li class="underline"><a class="href" href="contact.html">Contact</a></li>
+                        <li class="close" onclick="menuToggle()"><i class="fas fa-times"></i></li>
+                    </ul>
+                    <div class="lang">
+                        <img src="img/armenia.png" class="arm">
+                        <img src="img/russia.png" class="rus">
+                        <img src="img/united-states.png" class="us active">
+                    </div>
+                    <div class="burger" id="top-burger" onclick="menuToggle()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        </div> -->
+  
+
+    <div class="about-banner"></div>
+
+    <main class="main-contact">
+        <div class="wrapper">
+            <div class="contactAll">
+                <div class="form-container">
+                    <form class="contact-form">
+                        <label id="nameLabel" for="">Անուն</label>
+                        <input type="text" id="name" onkeypress="return alphaOnly(event);" required>                        
+                        <label id="telLabel" for="">Հեռախոս</label>
+                        <input type="text" onkeypress="javascript:return isNumber(event)" placeholder="+374" id="tel" required>
+                        <label id="mailLabel" for="">Էլ․հասցե</label>
+                        <input type="email" id="email" required>
+                        <label id="mesLabel" for="">Նամակ</label>
+                        <textarea id="message" required></textarea>
+                        <p id="valid" style="width:168px"></p>
+                        <input type="submit" id="btnValue" name="button" class="submit" value="Ուղարկել">
+                    </form>
+                </div>
+                <div id="map-container">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24187.05063948524!2d43.818190538054296!3d40.73163397932971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQzJzUzLjkiTiA0M8KwNTAnMDguNSJF!5e0!3m2!1sru!2s!4v1610722224938!5m2!1sru!2s" width="414" height="404" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info-container">
+                        <div class="location-row">
+                            <img style="padding-left:4px;" src="/img/location.png" alt="">
+                            <div class="locationP">
+                            <p id="locationParagraph" style="padding-left:27px;">Հայաստան, 2603, Շիրակի մարզ</p>
+                            <p id="locationParagraphBellow" style="padding-left:27px;"> Ազատան համայնք (Ախուրյանի շրջան)</p>
+                        </div>
+                        </div>
+                        <div style="padding-left:3px;" class="mail-row">
+                            <img src="/img/email.png" alt="">
+                            <p style="padding-left: 25px;">igit.ltd@mail.ru   </p>       
+                        </div>
+                        <div class="phone-row">
+                            <img style="padding-left:5px;" src="/img/call.png" alt="">
+                            <p>+374 94 088858</p>
+                        </div>
+                        <div style="padding-left:1px;" class="instagram-row">
+                            <img src="/img/Instagram.png" alt="">
+                            <p>@igit.am</p>
+                        </div>
+                        <div class="fb-row">
+                            <img src="/img/Facebook.png" alt="">
+                            <p>@igit.am</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </main>
+
+<script>
+
+function menuToggle(){
+
+if(document.querySelector(".nav-first").classList.contains("toggle")){
+    document.querySelector(".nav-first").classList.remove("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "auto";
+    },100)
+    //close
+}
+else{
+    document.querySelector(".nav-first").classList.add("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "hidden";
+    },100)
+    //burger
+    }
+}
+    var dataReload = document.querySelectorAll("[data-reload]");
+
+    var language = {           
+        eng:{
+            locationParagraph:"Armenia, 2603, Shirak region,",
+            locationParagraphBellow:"Azatan community (Akhuryan region)",
+            nameLabel:"Name",
+            mesLabel:"Message",
+            mailLabel:"Email",
+            telLabel:"Telephone",
+            btnValue:"Send",
+            li1:"About us",
+            li2:"Acheivements",
+            li3:"Products",
+            li4:"Videos",
+            li5:"Contact",
+        },
+        rus:{
+            locationParagraph:"Армения, 2603, Ширакская область,",
+            locationParagraphBellow:"Община Азатан (Ахурянский район)",
+            nameLabel:"Имя",
+            mesLabel:"Сообщение",
+            mailLabel:"Эл. адрес",
+            telLabel:"Телефон",
+            btnValue:"Отправить",
+            li1:"О нас",
+            li2:"Достижения",
+            li3:"Продукты",
+            li4:"Видео",
+            li5:"Связь",
+        }
+    };
+
+    if(window.location.hash){
+        if(window.location.hash === "#eng"){
+            locationParagraph.textContent = language.eng.locationParagraph;
+            locationParagraphBellow.textContent = language.eng.locationParagraphBellow;
+            nameLabel.textContent = language.eng.nameLabel;
+            telLabel.textContent = language.eng.telLabel;
+            mailLabel.textContent = language.eng.mailLabel;
+            mesLabel.textContent = language.eng.mesLabel;
+            btnValue.value = language.eng.btnValue;
+            li1.textContent = language.eng.li1;
+            li2.textContent = language.eng.li2;
+            li3.textContent = language.eng.li3;
+            li4.textContent = language.eng.li4;
+            li5.textContent = language.eng.li5;
+        }
+        else if(window.location.hash === "#rus"){
+            locationParagraph.textContent = language.rus.locationParagraph;
+            locationParagraphBellow.textContent = language.rus.locationParagraphBellow;
+            nameLabel.textContent = language.rus.nameLabel;
+            telLabel.textContent = language.rus.telLabel;
+            mailLabel.textContent = language.rus.mailLabel;
+            mesLabel.textContent = language.rus.mesLabel;
+            btnValue.value = language.rus.btnValue;
+            li1.textContent = language.rus.li1;
+            li2.textContent = language.rus.li2;
+            li3.textContent = language.rus.li3;
+            li4.textContent = language.rus.li4;
+            li5.textContent = language.rus.li5;
+        }
+    };
+
+
+    function reloadPage() {
+        setTimeout(function () {
+            location.reload();
+        }, 100);
+    }
+
+const contactForm = document.querySelector('.contact-form');
+let firstName = document.getElementById("name");
+let email = document.getElementById("email");
+let tel = document.getElementById("tel");
+let message = document.getElementById("message");
+let p = document.getElementById("valid");
+var btn = document.getElementById("btnValue");
+
+function isNumber(event) {
+        var iKeyCode = (event.which) ? event.which : event.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }    
+
+function alphaOnly(event) {
+    var iKeyCode = (event.which) ? event.which : event.keyCode
+    if (iKeyCode > 31 && iKeyCode != 32 && (iKeyCode < 65 || iKeyCode > 90) && (iKeyCode < 97 || iKeyCode > 122))
+        return false;
+
+    return true;
+};
+
+
+
+    contactForm.addEventListener("submit", (e) => {
+    let messages = [];
+    if(firstName.value.length  < 3){
+        if(window.location.hash === "#rus"){
+            p.style.color = "red";
+            messages.push("Имя должно содержать более 2 символов");
+        }
+        else if(window.location.hash === "#rus"){
+            p.style.color = "red";
+            messages.push("Name must be more than 2 characters");
+        }
+        else{
+            p.style.color = "red";
+            messages.push("Անունը պետք է կազմի ավելի քան 2 նիշ");
+        }  
+    }
+    if(tel.value.length > 8 || tel.value.length < 8){
+        if(window.location.hash === "#rus"){
+            p.style.color = "red";
+            messages.push("Номер телефона должен состоять из 8 символов");
+        }
+        else if(window.location.hash === "#rus"){
+            p.style.color = "red";
+            messages.push("Telephone number must be 8 characters");
+        }
+        else{
+            p.style.color = "red";
+            messages.push("Հեռախոսահամարը պետք է կազմի 8 նիշ");
+        }
+    }
+    if(messages.length > 0){
+        p.innerText = messages.join();
+    }
+
+    e.preventDefault();
+    let formData = {
+        name:firstName.value,
+        email:email.value,
+        tel:tel.value,
+        message:message.value,
+    }
+
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST','/');
+    xhr.setRequestHeader('content-type', 'appLication/json');
+    xhr.onload = function(){
+        console.log(xhr.responseText);
+        if(xhr.responseText == 'success'){
+            firstName.value = '';
+            email.value = '';
+            tel.value = '';
+            message.value = '';
+            // if(window.location.hash === "#rus"){
+            // p.style.color = "green";
+            // p.innerText = "Сообщение отправлено";
+            // }
+            // else if(window.location.hash === "#rus"){
+            //     p.style.color = "green";
+            //     p.innerText = "Message sent";
+            // }
+            // else{
+            //     p.style.color = "green";
+            //     p.innerText = "Նամակը ուղարկված է";
+            // }
+        }
+        else if(xhr.responseText == 'error'){
+            if(window.location.hash === "#rus"){
+                p.style.color = "red";
+                p.innerHTML = "Что-то пошло не так";
+            }
+            else if(window.location.hash === "#eng"){
+                p.style.color = "red";
+                p.innerHTML = "Something went wrong";
+            }
+            else{
+                p.style.color = "red";
+                p.innerHTML = "Ինչ որ բան այնպես չգնաց";
+            }
+        }
+    }
+
+    xhr.send(JSON.stringify(formData));
+
+})
+
+
+    </script>
+</body>
+</html>

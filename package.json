@@ -1,0 +1,28 @@
+{
+  "name": "contactform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Babayan777/Igit-Demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Babayan777/Igit-Demo/issues"
+  },
+  "homepage": "https://github.com/Babayan777/Igit-Demo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

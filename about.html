@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Igit</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c1c0912b51.js"></script>
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="navigation">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logo.png" alt="">
+                    </a>
+                    <ul class="nav-first">
+                        <li class="underline"><a id="li1" class="href" href="about.html">Մեր մասին</a></li>
+                        <li><a id="li2" href="acheivements.html">Մրցանակներ</a></li>
+                        <li><a id="li3" href="product.html">Ապրանքներ</a></li>
+                        <li><a id="li4" href="video.html">Տեսանյութեր</a></li>
+                        <li><a id="li5" href="contact.html">Կապ</a></li>
+                        <li class="close" onclick="menuToggle()"><i class="fas fa-times"></i></li>
+                    </ul>
+                    <div class="lang">
+                        <a href="#arm" data-reload onclick="reloadPage()">
+                            <img src="/img/armenia.png" class="arm">
+                        </a>
+                        <a href="#rus" data-reload onclick="reloadPage()">
+                            <img src="/img/russia.png" class="rus">
+                        </a>
+                        <a href="#eng" data-reload onclick="reloadPage()">
+                            <img src="/img/united-states.png" class="us">
+                        </a>
+                    </div>
+                    <div class="burger" id="top-burger" onclick="menuToggle()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-banner"></div>
+
+    <main class="main-about">
+            <div class="wrapper">
+                <div class="about-container">
+                    <div class="about-content">
+                        <p id="aboutParagraph"><<Իգիթ>> ՍՊԸ հիմնադրվել է 1995թ-ին Շիրակի մարզի Ազատան գյուղում Իգիթյանների ընտանիքի կողնից։ Ընկերության տնօրեն Անդրանիկ Իգիթյանը սովետական ժամանակաշրջանում Հայաստանի լավագույն պանրագործներից է եղել և հիմա փոխանցում է իր գիտելիքներն ու փորձը երիտասարդ սերնդին՝ նպաստելով ոլորտի պահպանմանը և զարգացմանը։
+                            Ձեռնարկությունը համալրված է նորագույն տեխնոլոգիաներով, որոնք փորձի ու գիտելիքների հետ մեկտեղ, թույլ են տալիս ստանալ կաթնամթերքին բնորոշ ավանդական համը և բարձր որակը։ Ամբողջ տեսականին անցնում է բոլոր տեսակի լաբորատոր փորձաքննություններն ու ստուգումները, որոնք ապահովվում են արտադրանքի անփոփոխ բարձր որակը։
+                            Մենք հպարտ ենք, որ սկսած 1995թ-ից ապահովում ենք  պանրի և կաթնամթերքի բարձր որակը, որը պարբերաբար հաստատում են սպառողները և ոլորտի մասնագետները։
+                        </p>
+                    </div>
+                </div>
+            </div>     
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function menuToggle(){
+
+        if(document.querySelector(".nav-first").classList.contains("toggle")){
+            document.querySelector(".nav-first").classList.remove("toggle");
+            setTimeout(function(){
+                document.querySelector("body").style.overflow = "auto";
+            },100)
+            //close
+        }
+        else{
+            document.querySelector(".nav-first").classList.add("toggle");
+            setTimeout(function(){
+                document.querySelector("body").style.overflow = "hidden";
+            },100)
+            //burger
+            }
+        }
+
+        var dataReload = document.querySelectorAll("[data-reload]");
+
+        var br = document.createElement("BR");
+
+        var language = {            
+            eng:{
+                li1:"About us",
+                li2:"Acheivements",
+                li3:"Products",
+                li4:"Videos",
+                li5:"Contact",
+                aboutParagraph:"“Igit‘’ LLC was founded in 1995 in Azatan village of Shirak region by the Igityan family. The director of the company, Andranik Igityan, was one of the best cheesemakers in Armenia during the Soviet era and now he passes on his knowledge and experience to the younger generation, contributing to the preservation and development of the sphere. The company is equipped with the latest technologies, which, together with experience and knowledge, allow to obtain the traditional taste typical of dairy products և high quality. The whole range goes through all kinds of laboratory examinations and tests, which ensure the unchanged high quality of the product. We are proud that since 1995 we have been ensuring the high quality of cheese և dairy products, which are regularly approved by consumers and specialists in the field.",
+            },
+            rus:{
+                li1:"О нас",
+                li2:"Достижения",
+                li3:"Продукты",
+                li4:"Видео",
+                li5:"Связь",
+                aboutParagraph:`Общество с ограниченной ответственностью ИГИТ основано в 1995г. в селе Азатан Ширакской области.Основатель общества - известная в городе семья Игитянов, старший из которых, Андраник Игитян, в советские годы был одним из самых лучших сыроделов в Армении. Сейчас он свои профессиональные знания передает младшему поколению, способствуя сохранению и  развитию традиций в этой области.Общество с ограниченной ответственностью  “ИГИТ‘’ - это высокотехнологичное предприятие, оснащенное современным оборудованием  производства, что в сочетании с передовыми инновационными технологиями позволяет добиться оптимального соотношения классического вкуса молочной продукции и ее высочайшего качества. Особое внимание уделяется санитарному контролю и культуре производства. Вся продукция проходит многоступенчатый физико-химический, микробиологический и радиометрический  контроль на всех этапах производства, что обеспечивает стабильное качество производимой продукции.Современное производство, высококвалифицированные специалисты, передовые технологии гарантируют сохранение всех ценнейших природных свойств молока, витаминов, белков, жиров в экологически чистой продукции предприятия без консервантов.Мы гордимся тем, что начиная с 1995 года обеспечиваем безупречное качество сыра и молочных продуктов, которые регулярно получают высокую оценку потребителей и экспертов отрасли.Общество за время своей деятельности регулярно представляло свои новинки: изучая международный рынок, общество    “ ИГИТ ‘’   своим потребителям предлагало и предлагает современные молочные продукты.В нашем производстве используется только натуральное молоко, которое приобретается из фермерских хозяйств Ширакской области.На предприятии проводится полный цикл по переработке молока: сбор молока, переработка, производство молочных продуктов и их реализация. Молоко высшего сорта заводу поставляют более чем 150 молокопроизводителей.Сыры производятся по  рецепту, созданному на основе лучших достижений армянских сыроделов. Они производятся из уникального по своим качествам молока Ширакского региона и содержат только натуральные компоненты.На рынке  молочных продуктов в Армении  общество   “ ИГИТ ‘’  является одним из лидеров.Покупая наш продукт, покупатель может быть уверен, что в нем нет никаких гормональных препаратов, генно-модифицированных организмов, а все микробиологические показатели соответствуют гигиеническим нормативам.`
+            }
+        };
+
+        if(window.location.hash){
+            if(window.location.hash === "#eng"){
+                aboutParagraph.textContent = language.eng.aboutParagraph;
+                li1.textContent = language.eng.li1;
+                li2.textContent = language.eng.li2;
+                li3.textContent = language.eng.li3;
+                li4.textContent = language.eng.li4;
+                li5.textContent = language.eng.li5;
+            }
+            else if(window.location.hash === "#rus"){
+                aboutParagraph.textContent = language.rus.aboutParagraph;
+                document.querySelector(".about-content p").style.paddingRight = "30px";
+                document.querySelector(".about-content p").style.paddingLeft = "15px";
+                li1.textContent = language.rus.li1;
+                li2.textContent = language.rus.li2;
+                li3.textContent = language.rus.li3;
+                li4.textContent = language.rus.li4;
+                li5.textContent = language.rus.li5;
+            }
+        };
+
+
+        function reloadPage() {
+            setTimeout(function () {
+                location.reload();
+            }, 100);
+        }
+
+</script>
+</body>
+</html>

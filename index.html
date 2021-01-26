@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Igit</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c1c0912b51.js"></script>
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+        <header id="header">
+            <div class="wrapper">
+                <div class="navigation">
+                        <a href="index.html">
+                            <img class="logo" src="/img/logo.png" alt="">
+                        </a>
+                        <ul class="nav-first">
+                            <li><a class="screen" id="li1" href="about.html">Մեր մասին</a></li>
+                            <li><a class="screen" id="li2" href="acheivements.html">Մրցանակներ</a></li>
+                            <li><a class="screen" id="li3" href="product.html">Ապրանքներ</a></li>
+                            <li><a class="screen" id="li4" href="video.html">Տեսանյութեր</a></li>
+                            <li><a class="screen" id="li5" href="contact.html">Կապ</a></li>
+                            <li class="close" onclick="menuToggle()"><i class="fas fa-times"></i></li>
+                        </ul>
+                        <div class="lang">
+                            <a href="#arm" data-reload onclick="reloadPage()">
+                                <img src="/img/armenia.png" class="arm">
+                            </a>
+                            <a href="#rus" data-reload onclick="reloadPage()">
+                                <img src="/img/russia.png" class="rus">
+                            </a>
+                            <a href="#eng" data-reload onclick="reloadPage()">
+                                <img src="/img/united-states.png" class="us">
+                            </a>
+                        </div>
+                        <div class="burger" id="top-burger" onclick="menuToggle()">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                </div>
+            </div>
+        </header>
+
+
+    <main class="main1">
+        <div class="main1Container">
+            <div class="words">
+                <p class="igitWord" id="igit">Իգիթ</p>
+                <p class="madeWord" id="secondHeading">Պատրաստված է սիրով</p>
+            </div>
+        </div>
+    </main>
+
+
+
+<script>
+
+function menuToggle(){
+
+if(document.querySelector(".nav-first").classList.contains("toggle")){
+    document.querySelector(".nav-first").classList.remove("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "auto";
+    },100)
+    //close
+}
+else{
+    document.querySelector(".nav-first").classList.add("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "hidden";
+    },100)
+    //burger
+    }
+}
+
+        var dataReload = document.querySelectorAll("[data-reload]");
+        var screens = document.querySelectorAll(".screen");
+
+        var language = {            
+            eng:{
+                igit:"Igit",
+                secondHeading:"Made with love",
+                li1:"About us",
+                li2:"Acheivements",
+                li3:"Products",
+                li4:"Videos",
+                li5:"Contact",
+            },
+            rus:{
+                igit:"Игит",
+                secondHeading:"Сделано с любовью",
+                li1:"О нас",
+                li2:"Достижения",
+                li3:"Продукты",
+                li4:"Видео",
+                li5:"Связь",
+            }
+        };
+
+        if(window.location.hash){
+            if(window.location.hash === "#eng"){
+                igit.textContent = language.eng.igit;
+                secondHeading.textContent = language.eng.secondHeading;
+                li1.textContent = language.eng.li1;
+                li2.textContent = language.eng.li2;
+                li3.textContent = language.eng.li3;
+                li4.textContent = language.eng.li4;
+                li5.textContent = language.eng.li5;
+            }
+            else if(window.location.hash === "#rus"){
+                igit.textContent = language.rus.igit;
+                secondHeading.textContent = language.rus.secondHeading;
+                li1.textContent = language.rus.li1;
+                li2.textContent = language.rus.li2;
+                li3.textContent = language.rus.li3;
+                li4.textContent = language.rus.li4;
+                li5.textContent = language.rus.li5;
+            }
+        };
+
+
+        function reloadPage() {
+            setTimeout(function () {
+                location.reload();
+            }, 100);
+        }
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Igit</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c1c0912b51.js"></script>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="navigation">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logo.png" alt="">
+                    </a>
+                    <ul class="nav-first">
+                        <li><a id="li1" href="about.html">Մեր մասին</a></li>
+                        <li><a id="li2" href="acheivements.html">Մրցանակներ</a></li>
+                        <li class="underline"><a id="li3" class="href" href="product.html">Ապրանքներ</a></li>
+                        <li><a id="li4" href="video.html">Տեսանյութեր</a></li>
+                        <li><a id="li5" href="contact.html">Կապ</a></li>
+                        <li class="close" onclick="menuToggle()"><i class="fas fa-times"></i></li>
+                    </ul>
+                    <div class="lang">
+                        <a href="#arm" data-reload onclick="reloadPage()">
+                            <img src="img/armenia.png" class="arm">
+                        </a>
+                        <a href="#rus" data-reload onclick="reloadPage()">
+                            <img src="img/russia.png" class="rus">
+                        </a>
+                        <a href="#eng" data-reload onclick="reloadPage()">
+                            <img src="img/united-states.png" class="us">
+                        </a>
+                    </div>
+                    <div class="burger" id="top-burger" onclick="menuToggle()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-second-media-container">
+        <ul  class="nav-second-media">
+            <li class="cheese">
+                <a id="li12"  href="product.html">
+                Պանիր
+               </a>
+            </li>
+            <li class="cream">
+                <a id="li13" href="sourcream.html">
+                Թթվասեր
+               </a>
+            </li>
+            <li class="matzoon">
+                <a id="li14" href="matzoon.html">
+                  Մածուն 
+                </a>  
+            </li>
+            <li class="milk">
+                <a style="text-decoration: underline white; color: white;" id="li15" href="milk.html">
+                   Կաթ
+                </a>
+            </li>
+            <li>
+                <a id="li16" href="curd.html">
+                Կաթնաշոռ
+               </a>
+            </li>
+            <li>
+                <a id="li17" href="#">
+                Պաղպաղակ
+               </a>
+            </li>
+            <li class="close" onclick="navMiddleMedia()"><i class="fas fa-times"></i></li>
+        </ul>
+    </div>
+
+<div class="topBanner"></div>
+     <div class="banner-nav">
+         <div class="wrapper">
+            <div class="banner-navigation">
+                <ul class="nav-second">
+                    <li class="cheese">
+                        <a id="li6" href="product.html">
+                        Պանիր
+                       </a>
+                    </li>
+                    <li class="cream">
+                        <a id="li7" href="sourcream.html">
+                        Թթվասեր
+                       </a>
+                    </li>
+                    <li class="matzoon">
+                        <a id="li8" href="matzoon.html">
+                          Մածուն 
+                        </a>  
+                    </li>
+                    <li class="milk">
+                        <a  style="text-decoration: underline white; color: white;" id="li9" href="milk.html">
+                           Կաթ
+                        </a>
+                    </li>
+                    <li class="curd">
+                        <a href="product.html" id="li10" href="curd.html">
+                        Կաթնաշոռ
+                       </a>
+                    </li>
+                    <li class="ice-cream">
+                        <a  id="li11" href="#">
+                        Պաղպաղակ
+                       </a>
+                    </li>
+                </ul>
+                <div id="middle-burger" onclick="navMiddleMedia()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                </div>
+          </div>
+        </div>
+    </div>
+<div class="belowBanner"></div>
+
+
+<!-- Products -->
+    <main class="main2">
+        <div class="wrapper" id="main-wrapper">
+            <div class="productContainer">
+                <div class="product-wrapper">
+                <p id="milkTitle" class="productTitle">Կաթ ’’ Իգիթ ’’</p>
+                <p id="milkParagraph" class="productAbout">Անարատ  կաթ, յուղազերծ չոր կաթ,մածնի մակարդ: Սննդային արժեքը 100գ սպիտակուց 2.8գ, ճարպ 3.2գ, ածխաջրեր 4.1գ.. Պահել +2...+4C ջերմաստիճանի և 80% օդի հարաբերական խոնավության պայմաններում</p>
+                </div>
+             </div>            
+              <div class="productImg">
+                 <a onclick="plusSlidesSourCream(-1)" class="leftClick"></a>
+                 <div class="mySlidesSourCream SourCreamfade">
+                     <img class="kat" src="/img/kat1.jpg" alt="">
+                 </div>
+                 <a onclick="plusSlidesSourCream(1)" class="rightClick"></a>
+             </div>
+        </div>
+    </main>
+
+<script>
+
+function menuToggle(){
+
+if(document.querySelector(".nav-first").classList.contains("toggle")){
+    document.querySelector(".nav-first").classList.remove("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "auto";
+    },100)
+    //close
+}
+else{
+    document.querySelector(".nav-first").classList.add("toggle");
+    setTimeout(function(){
+        document.querySelector("body").style.overflow = "hidden";
+    },100)
+    //burger
+    }
+}
+
+function navMiddleMedia(){
+    if(document.querySelector(".nav-second-media-container").classList.contains("middleMenuToggle")){
+        document.querySelector(".nav-second-media-container").classList.remove("middleMenuToggle");
+                setTimeout(function(){
+            document.querySelector("body").style.overflow = "auto";
+        },100)
+        //close
+    }
+    else{
+        document.querySelector(".nav-second-media-container").classList.add("middleMenuToggle");
+        setTimeout(function(){
+            document.querySelector("body").style.overflow = "hidden";
+        },100)
+        //burger
+    }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlidesSourCream(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+var productTitle = document.querySelector(".productTitle");
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlidesSourCream");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
+
+var dataReload = document.querySelectorAll("[data-reload]");
+
+var language = {            
+    eng:{
+        li1:"About us",
+        li2:"Acheivements",
+        li3:"Products",
+        li4:"Videos",
+        li5:"Contact",
+        li6:"Cheese",
+        li7:"Sour cream",
+        li8:"Matzoon",
+        li9:"Milk",
+        li10:"Curd",
+        li11:"Ice-cream",
+        li12:"Cheese",
+        li13:"Sour cream",
+        li14:"Matzoon",
+        li15:"Milk",
+        li16:"Curd",
+        li17:"Ice-cream",
+        productParagraph:"Ingredients - pasteurized cow's milk, pepsin, mesophilic bacterial culture, calcium chloride, salt. Nutritional value per 100 g: proteins 20 g, fats 27.5 g. Storage conditions: at a temperature of +2 ... + 4C and a relative humidity of 80% - 6 months.",
+    },
+    rus:{
+        li1:"О нас",
+        li2:"Достижения",
+        li3:"Продукты",
+        li4:"Видео",
+        li5:"Связь",
+        li6:"Сыр",
+        li7:"Сметана",
+        li8:"Мацун",
+        li9:"Молоко",
+        li10:"Творог",
+        li11:"Мороженое",
+        li12:"Сыр",
+        li13:"Сметана",
+        li14:"Мацун",
+        li15:"Молоко",
+        li16:"Творог",
+        li17:"Мороженое",
+        productParagraph:"Состав - молоко коровье пастеризованное, пепсин, мезофильная бактериальная культура, хлорид кальция, соль. Пищевая ценность в 100 г: белки 20 г, жиры 27,5 г. Условия хранения: при температуре +2 ... + 4С и относительной влажности 80% - 6 месяцев.",
+    }
+};
+
+if(window.location.hash){
+    if(window.location.hash === "#eng"){
+        productTitle.textContent = "Cheese ’’ Chechil ’’";
+        productParagraph.textContent = language.eng.productParagraph;
+        li1.textContent = language.eng.li1;
+        li2.textContent = language.eng.li2;
+        li3.textContent = language.eng.li3;
+        li4.textContent = language.eng.li4;
+        li5.textContent = language.eng.li5;
+        li6.textContent = language.eng.li6;
+        li7.textContent = language.eng.li7;
+        li8.textContent = language.eng.li8;
+        li9.textContent = language.eng.li9;
+        li10.textContent = language.eng.li10;
+        li11.textContent = language.eng.li11;
+        li12.textContent = language.eng.li12;
+        li13.textContent = language.eng.li13;
+        li14.textContent = language.eng.li14;
+        li15.textContent = language.eng.li15;
+        li16.textContent = language.eng.li16;
+        li17.textContent = language.eng.li17;
+    }
+    else if(window.location.hash === "#rus"){
+        productTitle.textContent = "Сыр ’’ Чечил ’’";
+        productParagraph.textContent = language.rus.productParagraph;
+        li1.textContent = language.rus.li1;
+        li2.textContent = language.rus.li2;
+        li3.textContent = language.rus.li3;
+        li4.textContent = language.rus.li4;
+        li5.textContent = language.rus.li5;
+        li6.textContent = language.rus.li6;
+        li7.textContent = language.rus.li7;
+        li8.textContent = language.rus.li8;
+        li9.textContent = language.rus.li9;
+        li10.textContent = language.rus.li10;
+        li11.textContent = language.rus.li11;
+        li12.textContent = language.rus.li12;
+        li13.textContent = language.rus.li13;
+        li14.textContent = language.rus.li14;
+        li15.textContent = language.rus.li15;
+        li16.textContent = language.rus.li16;
+        li17.textContent = language.rus.li17;
+    }
+};
+
+
+function reloadPage() {
+    setTimeout(function () {
+        location.reload();
+    }, 100);
+}
+
+</script>
+</body>
+</html>
